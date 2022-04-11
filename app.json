@@ -1,0 +1,28 @@
+{
+  "name": "GPLink-Bot",
+  "description": "Get direct link from gplink",
+  "keywords": [
+    "telegram",
+    "gplink",
+    "directlink"
+  ],
+  "repository": "https://github.com/arun017s/GPLink-Bot",
+  "logo": "https://te.legra.ph/file/2512edeb7d6e102a31eed.jpg",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Get it from @Botfather",
+      "value": ""
+    }  
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
