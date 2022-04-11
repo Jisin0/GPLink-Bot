@@ -27,7 +27,8 @@ async def start(message):
 
 @bot.message_handler(IsPrivate())
 async def gp(message):
-    if not message.text.startswith("https://gplinks"):
+    if not message.text.startswith("https://gplinks") or message.text.startswith("gplinks"):
+       await message.answer("Sorry all I do is scrape GPLinks URLs :(")
        return
     m = await message.answer("Please wait...")
     link = get_link(message.text)
